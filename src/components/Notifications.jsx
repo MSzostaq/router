@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import { AnimatePresence } from "framer-motion";
+import GlobalContext from "../contexts/GlobalContext";
 import Notification from "./Notification";
 
 const StyledNotifications = styled.ul`
@@ -18,7 +19,8 @@ const StyledNotification = styled(Notification)`
   }
 `;
 
-const Notifications = ({ className, notifications }) => {
+const Notifications = ({ className }) => {
+  const { notifications } = useContext(GlobalContext);
   return (
     <StyledNotifications className={className}>
       <AnimatePresence initial={false}>

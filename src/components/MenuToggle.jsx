@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
+import GlobalContext from "../contexts/GlobalContext";
 import Icon from "./Icon";
 
 const ToggleButton = styled.button`
@@ -14,8 +15,12 @@ const ToggleButtonIcon = styled(Icon)`
 `;
 
 function MenuToggle({ className }) {
+  const { toggleMenu } = useContext(GlobalContext);
+  function onToggleButtonClick() {
+    toggleMenu(true);
+  }
   return (
-    <ToggleButton className={className}>
+    <ToggleButton className={className} onClick={onToggleButtonClick}>
       <ToggleButtonIcon icon="menu" />
     </ToggleButton>
   );

@@ -5,6 +5,7 @@ import MenuToggle from "../components/MenuToggle";
 import Toggle from "../components/Toggle";
 
 const View = styled.div`
+  background-color: #191923;
   height: 100%;
   position: relative;
 `;
@@ -22,7 +23,7 @@ const Form = styled.div`
   justify-content: center;
 `;
 
-function ToggleView() {
+function OtherView() {
   const { addNotification } = useContext(GlobalContext);
   const [value, setValue] = useState(false);
   function onValueChange(newValue) {
@@ -45,4 +46,4 @@ function ToggleView() {
   );
 }
 
-export default ToggleView;
+export default OtherView;

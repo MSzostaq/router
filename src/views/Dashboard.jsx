@@ -1,7 +1,8 @@
 import React from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
 import styled from "styled-components";
-import Menu from "../components/Menu";
+import OtherView from "./OtherView";
+import Sidebar from "../components/Sidebar";
 import ToggleView from "./ToggleView";
 
 const ViewWrapper = styled.div`
@@ -21,11 +22,13 @@ function Dashboard() {
           <Route path="/toggle">
             <ToggleView />
           </Route>
-          <Route path="/other"></Route>
+          <Route path="/other">
+            <OtherView />
+          </Route>
           <Redirect to="/toggle" />
         </Switch>
       </View>
-      <Menu />
+      <Sidebar />
     </ViewWrapper>
   );
 }
