@@ -1,10 +1,16 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+import Button from "./Button";
 import GlobalContext from "../contexts/GlobalContext";
 import Icon from "./Icon";
 
 const StyledSidebar = styled.div`
-  background-color: #052555;
+  align-items: center;
+  background-color: #707070;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   position: absolute;
   top: 0;
   left: 0;
@@ -22,11 +28,25 @@ const CloseButton = styled(Icon)`
   height: 48px;
 `;
 
+const StyledButton = styled(Button)`
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-decoration: none;
+  margin-top: 24px;
+`;
+
 const Sidebar = () => {
   const { isMenuOpen, toggleMenu } = useContext(GlobalContext);
   return isMenuOpen ? (
     <StyledSidebar>
       <CloseButton icon="close" onClick={() => toggleMenu(false)} />
+      <StyledButton as={Link} to="/toggle">
+        Day
+      </StyledButton>
+      <StyledButton as={Link} to="/other">
+        Night
+      </StyledButton>
     </StyledSidebar>
   ) : null;
 };

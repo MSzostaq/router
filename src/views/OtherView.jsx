@@ -5,7 +5,7 @@ import MenuToggle from "../components/MenuToggle";
 import Toggle from "../components/Toggle";
 
 const View = styled.div`
-  background-color: #191923;
+  background-color: #404040;
   height: 100%;
   position: relative;
 `;
