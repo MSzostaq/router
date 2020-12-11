@@ -4,7 +4,7 @@ import GlobalContext from "../contexts/GlobalContext";
 import Icon from "./Icon";
 
 const StyledSidebar = styled.div`
-  background-color: #0043a4;
+  background-color: #052555;
   position: absolute;
   top: 0;
   left: 0;
