@@ -32,7 +32,6 @@ const StyledButton = styled(Button)`
   align-items: center;
   display: flex;
   flex-direction: column;
-  font-decoration: none;
   margin-top: 24px;
 `;
 
