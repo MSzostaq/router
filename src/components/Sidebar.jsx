@@ -1,11 +1,12 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Button from "./Button";
 import GlobalContext from "../contexts/GlobalContext";
 import Icon from "./Icon";
 
-const StyledSidebar = styled.div`
+const StyledSidebar = styled(motion.div)`
   align-items: center;
   background-color: #707070;
   display: flex;
